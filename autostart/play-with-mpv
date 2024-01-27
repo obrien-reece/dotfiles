@@ -1,0 +1,6 @@
+[Desktop Entry]
+Categories=AudioVideo;Audio;Video;Player;TV
+Comment=Chrome extension and python server that allow you to play videos in webpage with MPV instead
+Exec=play-with-mpv
+Icon=MPVName=Play with MPV (Server)
+Type=Application

@@ -1,0 +1,33 @@
+auto-reload yes
+delete-read-articles-on-quit yes
+display-article-progress yes
+
+browser "brave %u"
+
+bind-key j down
+bind-key k up
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key G end
+bind-key g end
+bind-key n next-unread 
+bind-key N prev-unread 
+
+color background          color15    default
+color listnormal          color248   default
+color listnormal_unread   color4     default
+color listfocus           color0     color4
+color listfocus_unread    color0     color4   bold
+color info                color12    color0
+color article             color248   default
+
+# highlights
+highlight article "^(Feed|Link):.*$" color6 default bold
+highlight article "^(Title|Date|Author):.*$" color6 default bold
+highlight article "https?://[^ ]+" color10 default underline
+highlight article "\\[[0-9]+\\]" color10 default bold
+highlight article "\\[image\\ [0-9]+\\]" color10 default bold
+highlight feedlist "^─.*$" color6 color0 bold
+
+macro m set browser "motrix %u"; open-in-browser ; set browser o 
+
