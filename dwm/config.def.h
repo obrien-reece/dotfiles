@@ -41,6 +41,7 @@ static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 
 static const char *const autostart[] = {
 	"vivaldi", NULL,
+	"discord", NULL,
 	"thunderbird", NULL,
 	"qbittorrent", NULL,
 	// "brave", NULL,
@@ -58,6 +59,7 @@ static const Rule rules[] = {
 	 */
 	/* class                      instance                      title                     tags mask     isfloating        isterminal      noswallow     monitor */
 	{ "Brave-browser",            "brave-browser",              NULL,                     1 << 3,       0,                0,              0,            -1 },
+	{ "discord",			            "discord",								    NULL,                     1 << 3,       0,                0,              0,            -1 },
 	{ "Vivaldi-stable",           "vivaldi-stable",             NULL,                     1 << 0,       0,                0,              0,            -1 },
 	{ "kitty",                    "kitty",	       						 NULL, 	                  0,            0,                1,              0,            -1 },
 	{ NULL,                       "kittyscratch",							 NULL, 	                  SPTAG(0),     1,                1,              0,            -1 },

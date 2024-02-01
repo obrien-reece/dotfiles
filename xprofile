@@ -1,0 +1,4 @@
+slstatus &
+picom &
+nitrogen --random --set-scaled ~/Pictures/wallpapers/
+kitty --name kittyscratch &

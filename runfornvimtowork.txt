@@ -1,1 +1,2 @@
 ripgrep
+Install starship for the terminal icons to appear
