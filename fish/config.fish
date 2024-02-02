@@ -54,6 +54,9 @@ abbr tn 'tmux new -s (pwd | sed "s/.*\///g")'
 abbr tm "tmux"
 abbr l 'ls'
 
+# open yazi filemanager
+abbr yz 'yazi'
+
 # obsidian
 abbr ob 'obsidian'
 
@@ -62,9 +65,7 @@ abbr image 'sxiv'
 
 abbr gC 'cd ~/.config'
 abbr gd 'cd ~/Downloads'
-abbr gD 'cd ~/Documents'
 abbr gy 'cd ~/Downloads/paru && clear && ls'
-abbr gdd  'cd ~/Downloads/dotfiles'
 
 
 # SCRIPT TO RUN AUTOJUMP
