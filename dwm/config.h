@@ -40,11 +40,10 @@ static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 
 static const char *const autostart[] = {
-	"vivaldi", NULL,
-	"discord", NULL,
+	// "vivaldi", NULL,
 	"thunderbird", NULL,
 	"qbittorrent", NULL,
-	// "brave", NULL,
+	"brave", NULL,
 	// "telegram-desktop", NULL,
 	"spotify", NULL,
 	NULL /* terminate */
@@ -58,7 +57,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                      instance                      title                     tags mask     isfloating        isterminal      noswallow     monitor */
-	{ "Brave-browser",            "brave-browser",              NULL,                     1 << 3,       0,                0,              0,            -1 },
+	{ "Brave-browser",            "brave-browser",              NULL,                     1 << 0,       0,                0,              0,            -1 },
 	{ "discord",			            "discord",								    NULL,                     1 << 3,       0,                0,              0,            -1 },
 	{ "Vivaldi-stable",           "vivaldi-stable",             NULL,                     1 << 0,       0,                0,              0,            -1 },
 	{ "kitty",                    "kitty",	       						 NULL, 	                  0,            0,                1,              0,            -1 },
@@ -107,9 +106,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const char *termcmd[]  = { "kitty", NULL };
 
 #include "movestack.c"
+#include "exitdwm.c"
 
 static const char *blurlock[] = { "/home/obrien/.config/dwm/scripts/blur-lock", NULL };
-static const char *powermenu[] = { "/home/obrien/.config/dwm/scripts/powermenu", NULL };
 
 static const Key keys[] = {
 
@@ -125,7 +124,7 @@ static const Key keys[] = {
 
   /*Custom scripts*/
   { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = blurlock } },
-  { MODKEY|ShiftMask,             XK_e,      spawn,          {.v = powermenu } },
+	{ MODKEY|ShiftMask,             XK_e,      exitdwm,       {0} },
 
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
@@ -159,7 +158,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
-  { MODKEY,            	      		XK_Return, togglescratch,  {.ui = 0 } },
+  { MODKEY,            	       	XK_Return, togglescratch,  {.ui = 0 } },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -171,6 +170,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} }, 
 };
 
 /* button definitions */
