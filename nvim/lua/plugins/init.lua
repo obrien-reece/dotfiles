@@ -187,9 +187,9 @@ require('lazy').setup({
   end
   },
 
-  {
-    'wakatime/vim-wakatime'
-  },
+  -- {
+  --   'wakatime/vim-wakatime'
+  -- },
 
   {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
