@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-#include "/home/obrien/Downloads/dotfiles/dwm/themes/redish.h"
+#include "/home/obrien/Downloads/dotfiles/dwm/themes/yellow.h"
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -40,7 +40,6 @@ static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 
 static const char *const autostart[] = {
-	// "vivaldi", NULL,
 	"thunderbird", NULL,
 	"qbittorrent", NULL,
 	"brave", NULL,

@@ -1,2 +1,13 @@
 ripgrep
 Install starship for the terminal icons to appear
+
+
+[Tmux]
+Delete the plugins folder in tmux/plugins
+
+
+[slstatus]
+{ netspeed_rx,      "[ %s/Bs]",               "wlan0" },
+{ run_command,			"[  %s ] ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1 " },
+{ battery_perc,     "[  %s%% ] ",            "BAT0" },
+{ datetime,         "[📆 %s]",        "%a %b %d %H:%M:%S" },

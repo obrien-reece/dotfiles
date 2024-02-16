@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-#include "/home/obrien/Downloads/dotfiles/dwm/themes/redish.h"
+#include "/home/obrien/Downloads/dotfiles/dwm/themes/yellow.h"
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -40,7 +40,6 @@ static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 
 static const char *const autostart[] = {
-	"google-chrome-stable", NULL,
 	"thunderbird", NULL,
 	"qbittorrent", NULL,
 	"brave", NULL,
@@ -64,7 +63,7 @@ static const Rule rules[] = {
 	{ NULL,                       "kittyscratch",							 NULL, 	                  SPTAG(0),     1,                1,              0,            -1 },
 	{ "Thunar",	                 "thunar",                     NULL,                     0,            1,                0,              0,            -1 },
 	{ "Motrix",                   "motrix",                     NULL,                     1 << 7,       0,                0,              0,            -1 },
-	{ "Google-chrome",            "google-chrome",              NULL,                     1 << 0,       0,                0,              0,            -1 },
+	{ "Google-chrome",            "google-chrome",              NULL,                     1 << 3,       0,                0,              0,            -1 },
 	{ "TelegramDesktop",          "telegram-desktop",           NULL,                     1 << 4,       0,                0,              0,            -1 },
 	{ "thunderbird",              "Mail",                       NULL,                     1 << 6,       0,                0,              0,            -1 },
 	{ "qBittorrent",              "qbittorrent",                NULL,                     1 << 7,       0,                0,              0,            -1 },
