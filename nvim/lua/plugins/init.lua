@@ -186,6 +186,9 @@ require('lazy').setup({
     require("nvim-tree").setup {}
   end
   },
+  {
+    "farmergreg/vim-lastplace"
+  },
 
   -- {
   --   'wakatime/vim-wakatime'
