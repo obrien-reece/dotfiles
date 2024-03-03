@@ -42,7 +42,8 @@ static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 static const char *const autostart[] = {
 	"thunderbird", NULL,
 	"qbittorrent", NULL,
-	"brave", NULL,
+	// "brave", NULL,
+	"vivaldi", NULL,
 	// "telegram-desktop", NULL,
 	"spotify", NULL,
 	NULL /* terminate */

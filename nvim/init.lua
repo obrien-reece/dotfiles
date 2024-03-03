@@ -24,3 +24,5 @@ require("bufferline-config")
 require("n-vimtree-cfg")
 require("keybindings")
 require("toggle-term")
+require("harpoon-cfg")
+

@@ -10,6 +10,30 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+
+-- Mark the current file
+vim.keymap.nnoremap('<Leader>hm', ':lua require("harpoon.mark").add_file()<CR>', { silent = true, desc = 'Mark current file' })
+
+-- Navigate to the next marked file
+vim.keymap.nnoremap('<Leader>hn', ':lua require("harpoon.ui").nav_next()<CR>', { silent = true, desc = 'Navigate to next marked file' })
+
+-- Navigate to the previous marked file
+vim.keymap.nnoremap('<Leader>hp', ':lua require("harpoon.ui").nav_prev()<CR>', { silent = true, desc = 'Navigate to previous marked file' })
+
+-- Toggle Harpoon's UI (file explorer)
+vim.keymap.nnoremap('<Leader>hf', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', { silent = true, desc = 'Toggle Harpoon file explorer' })
+
+-- Open the quick switch menu to navigate between marked files
+vim.keymap.nnoremap('<Leader>ho', ':lua require("harpoon.ui").nav_file(1)<CR>', { silent = true, desc = 'Open quick switch menu' })
+
+-- Close all marked files
+vim.keymap.nnoremap('<Leader>hc', ':lua require("harpoon.mark").clear_all()<CR>', { silent = true, desc = 'Close all marked files' })
+
+-- Harpoon
+vim.keymap.set('n', 'hx', require('harpoon.mark').add_file)
+vim.keymap.set('n', 'hh', require('harpoon.ui').nav_next)
+vim.keymap.set('n', 'hp', require('harpoon.ui').nav_prev)
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })

@@ -190,9 +190,14 @@ require('lazy').setup({
     "farmergreg/vim-lastplace"
   },
 
-  -- {
-  --   'wakatime/vim-wakatime'
-  -- },
+  {
+    'wakatime/vim-wakatime'
+  },
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
 
   {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
