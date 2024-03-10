@@ -49,4 +49,3 @@ format = "$all_status$ahead_behind"
 style_user = "bold dimmed blue"
 show_always = true
 
-
