@@ -40,3 +40,4 @@ vim.opt.listchars = {eol = '↴'}
 vim.opt.list = true
 
 vim.opt.fillchars = { eob = " "}
+vim.opt.swapfile = false

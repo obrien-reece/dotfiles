@@ -1,4 +1,15 @@
 local harpoon = require("harpoon")
+local ui = require("harpoon.ui")
+
+-- settings = {
+--     save_on_toggle = true,
+--     sync_on_ui_close = true,
+--     save_on_change = true,
+--     mark_branch = true,
+--     key = function()
+--         return vim.loop.cwd()
+--     end,
+-- }
 
 -- REQUIRED
 harpoon:setup()
