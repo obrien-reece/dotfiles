@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-#include "/home/obrien/Downloads/dotfiles/dwm/themes/green1.h"
+#include "/home/obrien/Downloads/dotfiles/dwm/themes/pink.h"
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
