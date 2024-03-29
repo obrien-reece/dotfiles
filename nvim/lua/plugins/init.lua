@@ -187,9 +187,11 @@ require('lazy').setup({
   end
   },
   {
-    "farmergreg/vim-lastplace"
+    'farmergreg/vim-lastplace'
   },
-
+  {
+    'mg979/vim-visual-multi'
+  },
   {
     'wakatime/vim-wakatime'
   },
@@ -198,8 +200,8 @@ require('lazy').setup({
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" }
   },
-
-  {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  {
+    "akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
   end
   },

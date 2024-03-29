@@ -1,6 +1,9 @@
 ripgrep
 Install starship for the terminal icons to appear
 
+[Bluetooth]
+sudo systemctl start bluetooth
+sudo systemctl enable bluetooth
 
 [Tmux]
 Delete the plugins folder in tmux/plugins
