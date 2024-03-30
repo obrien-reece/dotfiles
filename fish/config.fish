@@ -53,6 +53,7 @@ abbr ta "tmux a"
 abbr tn 'tmux new -s (pwd | sed "s/.*\///g")'
 abbr tm "tmux"
 abbr l 'ls'
+abbr ether 'm "https://www.youtube.com/watch?v=7Y1DjR80JJ4"'
 
 # open yazi filemanager
 abbr yz 'yazi'
