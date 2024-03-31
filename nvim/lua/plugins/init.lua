@@ -175,7 +175,7 @@ require('lazy').setup({
 
   {'nvim-tree/nvim-web-devicons'},
 
-  {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'},
+  -- {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'},
 
   {
   'nvim-tree/nvim-tree.lua',
@@ -192,9 +192,9 @@ require('lazy').setup({
   {
     'mg979/vim-visual-multi'
   },
-  {
-    'wakatime/vim-wakatime'
-  },
+  -- {
+  --   'wakatime/vim-wakatime'
+  -- },
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",

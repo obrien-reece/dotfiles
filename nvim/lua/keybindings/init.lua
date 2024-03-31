@@ -9,11 +9,5 @@ map('n', '<leader>e', ':NvimTreeToggle<CR>', {noremap=true, silent=true})
 map('v', '<', '<gv', {noremap = true, silent=false})
 map('v', '>', '>gv', {noremap = true, silent=false})
 
-
-vim.cmd[[
-  nnoremap <silent>b] :BufferLineCycleNext<CR>
-  nnoremap <silent>b[ :BufferLineCyclePrev<CR>
-]]
-
 -- Remaps of keys 
 vim.api.nvim_set_keymap('n', '0', '^', { noremap = true, silent = true })
