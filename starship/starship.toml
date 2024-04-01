@@ -1,7 +1,7 @@
 ## FIRST LINE/ROW: Info & Status
 # First param ─┌
 [username]
-format = " [╭─$user]($style)@"
+format = " [╭─$user]($style)"
 show_always = true
 style_root = "bold red"
 style_user = "bold red"
@@ -9,9 +9,9 @@ style_user = "bold red"
 # Second param
 [hostname]
 disabled = false
-format = "[$hostname]($style) in "
+format = "[$user]($style) in "
 ssh_only = false
-style = "bold dimmed red"
+style = "bold red"
 trim_at = "-"
 
 # Third param
