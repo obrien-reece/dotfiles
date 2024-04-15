@@ -10,7 +10,6 @@ alias lsa='exa --icons --color always -a'
 alias m='mpv'
 alias a='aura -A'
 alias subs='python3 submpv.lua'
-alias mnv='m --no-video'
 # alias find='grep -rnw'
 
 # SET THE DEFAULT EDITOR FOR RANGER TO BE VIM
@@ -24,6 +23,7 @@ abbr .. "cd .."
 abbr .... "cd ../.."
 abbr ...... "cd ../../.."
 abbr tr 'trash-restore'
+abbr te 'trash-empty'
 abbr t 'trash'
 abbr tl 'trash-list'
 abbr sed 'sed -n'
@@ -55,6 +55,10 @@ abbr tm "tmux"
 abbr l 'ls'
 abbr ether 'm "https://www.youtube.com/watch?v=7Y1DjR80JJ4"'
 abbr df "dotfiles"
+abbr txt "txt"
+abbr mnv 'm --no-video'
+abbr z 'zathura'
+abbr rss 'newsboat'
 
 # open yazi filemanager
 abbr yz 'yazi'

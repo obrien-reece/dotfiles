@@ -1,6 +1,8 @@
 auto-reload yes
-delete-read-articles-on-quit yes
 display-article-progress yes
+download-full-page yes
+show-read-feeds yes
+delete-read-articles-on-quit yes
 
 browser "brave %u"
 
