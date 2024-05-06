@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-#include "/home/indeche/Downloads/dotfiles/dwm/themes/purple.h"
+#include "/home/indeche/Downloads/dotfiles/dwm/themes/yellow.h"
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -41,9 +41,10 @@ static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 
 static const char *const autostart[] = {
 	"thunderbird", NULL,
-	"google-chrome-stable", NULL,
+	// "google-chrome-stable", NULL,
 	"calibre", NULL,
 	"qbittorrent", NULL,
+	// "fdm", NULL,
 	"brave", NULL,
 	// "vivaldi", NULL,
 	// "telegram-desktop", NULL,
@@ -70,6 +71,7 @@ static const Rule rules[] = {
 	{ "TelegramDesktop",          "telegram-desktop",           NULL,                     1 << 4,       0,                0,              0,            -1 },
 	{ "thunderbird",              "Mail",                       NULL,                     1 << 6,       0,                0,              0,            -1 },
 	{ "qBittorrent",              "qbittorrent",                NULL,                     1 << 7,       0,                0,              0,            -1 },
+	{ "Free Download Manager",    "fdm",                        NULL,                     1 << 5,       0,                0,              0,            -1 },
 	{ "Spotify",                  "spotify",                    NULL,                     1 << 2,       0,                0,              0,            -1 },
 	{ "Nitrogen",                 NULL,                         NULL,                     1 << 5,       1,                0,              0,            -1 },
 	{ NULL,                       NULL,                         "Network Connections",    0,            1,                0,              0,            -1 },
