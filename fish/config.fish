@@ -2,23 +2,21 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# ALIASES
-alias vim='nvim'
-alias ls='exa --icons --color always'
-alias ll='exa --icons --color always -l'
-alias lsa='exa --icons --color always -a'
-alias m='mpv'
-alias a='aura -A'
-alias subs='python3 submpv.lua'
-# alias find='grep -rnw'
-
 # SET THE DEFAULT EDITOR FOR RANGER TO BE VIM
 set -x EDITOR nvim
 
 # EXPORT
 set fish_greeting # Supresses fish's intro message
 
-# ABBR 
+alias ls='exa --icons --color always'
+alias ll='exa --icons --color always -l'
+alias lsa='exa --icons --color always -a'
+
+# ABBREVIATIONS
+abbr vim='nvim'
+
+abbr m='mpv'
+
 abbr fish 'source ~/.config/fish/config.fish'
 
 # CD
@@ -86,11 +84,10 @@ abbr yz 'yazi'
 abbr ob 'obsidian'
 
 #image viewer
-abbr image 'sxiv'
+abbr image 'imv .'
 
-abbr gC 'cd ~/.config'
-abbr gd 'cd ~/Downloads'
-abbr gy 'cd ~/Downloads/paru && clear && ls'
+#yt-dlp
+abbr dy "yt-dlp -f 'bestvideo[height=1080]+bestaudio/best[height=1080]'"
 
 # autojump/zoxide
 abbr j 'z'
