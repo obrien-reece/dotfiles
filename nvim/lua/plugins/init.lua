@@ -196,14 +196,17 @@ require('lazy').setup({
     'wakatime/vim-wakatime'
   },
   {
+    'mvllow/modes.nvim'
+  },
+  {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" }
   },
   {
     "akinsho/toggleterm.nvim", config = function()
-    require("toggleterm").setup()
-  end
+      require("toggleterm").setup()
+    end
   },
 
 }, {})

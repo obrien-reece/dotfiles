@@ -13,9 +13,11 @@ alias ll='exa --icons --color always -l'
 alias lsa='exa --icons --color always -a'
 
 # ABBREVIATIONS
-abbr vim='nvim'
+abbr vim 'nvim'
 
-abbr m='mpv'
+abbr m 'mpv'
+
+abbr gy 'cd ~/Downloads/paru && clear && ls'
 
 abbr fish 'source ~/.config/fish/config.fish'
 
