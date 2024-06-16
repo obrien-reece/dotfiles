@@ -41,3 +41,25 @@ vim.opt.list = true
 
 vim.opt.fillchars = { eob = " "}
 vim.opt.swapfile = false
+
+-- Enable filetype detection using Lua API
+vim.filetype.add({
+  extension = {
+    php = 'php',
+  },
+  filename = {
+    ['.php'] = 'php',
+  },
+  pattern = {
+    ['.*%.php'] = 'php',
+  },
+})
+
+-- Set PHP filetype explicitly for .php files using autocommand
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = "*.php",
+  callback = function()
+    vim.bo.filetype = "php"
+  end
+})
+

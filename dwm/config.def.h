@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-#include "/home/indeche/Downloads/dotfiles/dwm/themes/yellow.h"
+#include "/home/indeche/Downloads/dotfiles/dwm/themes/gruv.h"
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -15,6 +15,14 @@ static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+};
+
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border*/
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 typedef struct {
@@ -40,46 +48,57 @@ static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 
 static const char *const autostart[] = {
-	"thunderbird", NULL,
-	// "google-chrome-stable", NULL,
-	"calibre", NULL,
+	"microsoft-edge-stable", NULL,
 	"qbittorrent", NULL,
-	// "fdm", NULL,
+	"falkon", NULL,
+	"thunderbird", NULL,
+	"betterbird", NULL,
+	"firefox", NULL,
+	// "spotify", NULL,
 	"brave", NULL,
+	// "google-chrome-stable", NULL,
 	// "vivaldi", NULL,
+	// "calibre", NULL,
+	// "discord", NULL,
+	// "geary", NULL,
+	// "fdm", NULL,
 	// "telegram-desktop", NULL,
-	"spotify", NULL,
 	NULL /* terminate */
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"};
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
-	 */
+	*/
 	/* class                      instance                      title                     tags mask     isfloating        isterminal      noswallow     monitor */
-	{ "Brave-browser",            "brave-browser",              NULL,                     1 << 0,       0,                0,              0,            -1 },
-	{ "calibre",                  "calibre-gui",                NULL,                     1 << 3,       0,                0,              0,            -1 },
-	{ "Vivaldi-stable",           "vivaldi-stable",             NULL,                     1 << 0,       0,                0,              0,            -1 },
-	{ "kitty",                    "kitty",	       						 NULL, 	                  0,            0,                1,              0,            -1 },
 	{ NULL,                       "kittyscratch",							 NULL, 	                  SPTAG(0),     1,                1,              0,            -1 },
-	{ "Thunar",	                 "thunar",                     NULL,                     0,            1,                0,              0,            -1 },
-	{ "Motrix",                   "motrix",                     NULL,                     1 << 7,       0,                0,              0,            -1 },
-	{ "Google-chrome",            "google-chrome",              NULL,                     1 << 3,       0,                0,              0,            -1 },
-	{ "TelegramDesktop",          "telegram-desktop",           NULL,                     1 << 4,       0,                0,              0,            -1 },
-	{ "thunderbird",              "Mail",                       NULL,                     1 << 6,       0,                0,              0,            -1 },
-	{ "qBittorrent",              "qbittorrent",                NULL,                     1 << 7,       0,                0,              0,            -1 },
-	{ "Free Download Manager",    "fdm",                        NULL,                     1 << 5,       0,                0,              0,            -1 },
-	{ "Spotify",                  "spotify",                    NULL,                     1 << 2,       0,                0,              0,            -1 },
-	{ "Nitrogen",                 NULL,                         NULL,                     1 << 5,       1,                0,              0,            -1 },
+	{ "kitty",                    "kitty",	       						 NULL, 	                  0,            0,                1,              0,            -1 },
 	{ NULL,                       NULL,                         "Network Connections",    0,            1,                0,              0,            -1 },
 	{ "Windscribe2",              "windscribe",                 NULL,                     0,            1,                0,              0,            -1 },
 	{ NULL,                       "simplescreenrecorder",       NULL,                     0,            1,                0,              0,            -1 },
+	{ "Thunar",	                 "thunar",                     NULL,                     0,            1,                0,              0,            -1 },
+	{ "Brave-browser",            "brave-browser",              NULL,                     1 << 0,       0,                0,              0,            -1 },
+	{ "Geary",                    "geary",                      NULL,                     1 << 0,       0,                0,              0,            -1 },
+	{ "Microsoft-edge",           "microsoft-edge",             NULL,                     1 << 1,       0,                0,              0,            -1 },
+	{ "Vivaldi-stable",           "vivaldi-stable",             NULL,                     1 << 2,       0,                0,              0,            -1 },
+	{ "calibre",                  "calibre-gui",                NULL,                     1 << 3,       0,                0,              0,            -1 },
+	{ "Google-chrome",            "google-chrome",              NULL,                     1 << 3,       0,                0,              0,            -1 },
+	{ "TelegramDesktop",          "telegram-desktop",           NULL,                     1 << 4,       0,                0,              0,            -1 },
+	{ "betterbird",               "Mail",                       NULL,                     1 << 5,       0,                0,              0,            -1 },
+	{ "Free Download Manager",    "fdm",                        NULL,                     1 << 5,       0,                0,              0,            -1 },
+	{ "Nitrogen",                 NULL,                         NULL,                     1 << 5,       1,                0,              0,            -1 },
 	{ "jetbrains-phpstorm",       "jetbrains-phpstorm",         NULL,                     1 << 5,       0,                0,              0,            -1 },
+	{ "thunderbird",              "Mail",                       NULL,                     1 << 6,       0,                0,              0,            -1 },
+	{ "Motrix",                   "motrix",                     NULL,                     1 << 7,       0,                0,              0,            -1 },
+	{ "qBittorrent",              "qbittorrent",                NULL,                     1 << 7,       0,                0,              0,            -1 },
 	{ "firefox",                  "Navigator",                  NULL,                     1 << 8,       0,                0,              0,            -1 },
-	};
+	{ "Spotify",                  "spotify",                    NULL,                     1 << 9,       0,                0,              0,            -1 },
+	{ "discord",                  "discord",                    NULL,                     1 << 10,       0,                0,              0,            -1 },
+	{ "falkon",                   "falkon",                     NULL,                     1 << 11,      0,                0,              0,            -1 },
+};
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
@@ -97,7 +116,7 @@ static const Layout layouts[] = {
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
+{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
@@ -116,26 +135,26 @@ static const char *blurlock[] = { "/home/obrien/.config/dwm/scripts/blur-lock", 
 
 static const Key keys[] = {
 
-  /*Volume*/ 
-  { 0, XF86XK_AudioLowerVolume, spawn, {.v = downvol} },
-  { 0, XF86XK_AudioMute, spawn, {.v = mutevol }},
-  { 0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol} },
+	/*Volume*/ 
+	{ 0, XF86XK_AudioLowerVolume, spawn, {.v = downvol} },
+	{ 0, XF86XK_AudioMute, spawn, {.v = mutevol }},
+	{ 0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol} },
 
-/* Keybindings for Media play/pause/next/previous */
-{ 0, XF86XK_AudioPlay, spawn, {.v = medplaypausecmd } },
-{ 0, XF86XK_AudioNext, spawn, {.v = mednextcmd } },
-{ 0, XF86XK_AudioPrev, spawn, {.v = medprevcmd } },
+	/* Keybindings for Media play/pause/next/previous */
+	{ 0, XF86XK_AudioPlay, spawn, {.v = medplaypausecmd } },
+	{ 0, XF86XK_AudioNext, spawn, {.v = mednextcmd } },
+	{ 0, XF86XK_AudioPrev, spawn, {.v = medprevcmd } },
 
-  /*Custom scripts*/
-  { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = blurlock } },
+	/*Custom scripts*/
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = blurlock } },
 	{ MODKEY|ShiftMask,             XK_q,      exitdwm,       {0} },
 
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-  
-  /*Move stack around*/ 
-  { MODKEY,                       XK_j,      movestack,      {.i = +1 } },
+
+	/*Move stack around*/ 
+	{ MODKEY,                       XK_j,      movestack,      {.i = +1 } },
 	{ MODKEY,                       XK_k,      movestack,      {.i = -1 } },
 
 	{ MODKEY|ShiftMask,             XK_j,      focusstack,     {.i = +1 } },
@@ -143,8 +162,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-  { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-/*{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },*/
+	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	/*{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },*/
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
@@ -159,10 +178,10 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
-	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
-  { MODKEY,            	       	XK_Return, togglescratch,  {.ui = 0 } },
+	// { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
+	// { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
+	// { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	{ MODKEY,            	       	XK_Return, togglescratch,  {.ui = 0 } },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -173,6 +192,11 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_minus,                  9)
+	TAGKEYS(                        XK_equal,                  10)
+	TAGKEYS(                        XK_bracketleft,            11)
+	TAGKEYS(                        XK_bracketright,            12)
+	TAGKEYS(                        XK_backslash,              13)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} }, 
 };

@@ -45,17 +45,18 @@ require('lazy').setup({
 
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {
-      disable = {
-        buftypes = {},
-        filetypes = {
+    disable = {
+      buftypes = {},
+      filetypes = {
         'python',
         'lua',
         'php',
+        'blade',
         'css',
         'lua',
-        },
       },
-    }
+    },
+  }
   },
 
   {
@@ -178,13 +179,13 @@ require('lazy').setup({
   -- {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'},
 
   {
-  'nvim-tree/nvim-tree.lua',
-  requires = {
-    'nvim-tree/nvim-web-devicons', -- optional
-  },
-  config = function()
-    require("nvim-tree").setup {}
-  end
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+    config = function()
+      require("nvim-tree").setup {}
+    end
   },
   {
     'farmergreg/vim-lastplace'
