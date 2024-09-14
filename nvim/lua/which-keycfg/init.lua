@@ -1,29 +1,32 @@
 local wk = require("which-key")
-
 local Terminal = require('toggleterm.terminal').Terminal
+
+-- ToggleTerm functions
 local toggle_float = function()
   local float = Terminal:new({direction = "float"})
   return float:toggle()
 end
-local toggle_lazygit = function()
-  local lazygit = Terminal:new({cmd = "lazygit", direction = "float"})
-  return lazygit:toggle()
-end
 
+-- Updated mappings using new WhichKey spec
 local mappings = {
-  q = {':q<cr>', "Quit"},
-  w = {':w<cr>', "Save"},
-  x = {':bdelete<cr>', "Close Buffer"},
-  E = {':e ~/.config/nvim/init.lua<cr>', "Edit config"},
-  f = {":Telescope find_files<cr>", 'Telescope Find Files'},
-  r = {":Telescope live_grep<cr>", 'Telescope Live Grep'},
-  b = {":Telescope buffers<cr>", 'Telescope Buffers'},
+  -- Single key mappings
+  { "<leader>q", ":q<cr>", desc = "Quit" },
+  { "<leader>w", ":w<cr>", desc = "Save" },
+  { "<leader>x", ":bdelete<cr>", desc = "Close Buffer" },
+  { "<leader>E", ":e ~/.config/nvim/init.lua<cr>", desc = "Edit config" },
+  
+  -- File group
+  { "<leader>f", group = "File" },  -- Group name
+  { "<leader>ff", ":Telescope find_files<cr>", desc = "Find Files" },
+  { "<leader>fr", ":Telescope live_grep<cr>", desc = "Live Grep" },
+  { "<leader>fb", ":Telescope buffers<cr>", desc = "Buffers" },
 
-  t = {
-    t = { ":ToggleTerm<cr>", "Split Below" },
-    f = { toggle_float , "Floating Terminal" },
-    -- l = { minimize_terminal, "LazyGit" }
-  },
+  -- Terminal group
+  { "<leader>t", group = "Terminal" },  -- Group name
+  { "<leader>tt", ":ToggleTerm<cr>", desc = "Split Below" },
+  { "<leader>tf", toggle_float, desc = "Floating Terminal" },
 }
-local opts = {prefix = '<leader>'}
-wk.register(mappings, opts)
+
+-- Register the mappings
+wk.add(mappings)
+

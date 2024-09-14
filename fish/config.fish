@@ -53,6 +53,7 @@ abbr gc 'git commit -m'
 abbr gcl 'git clone'
 abbr gp 'git push'
 abbr gb 'git branch'
+abbr gbr 'git branch -r'
 abbr gs 'git status'
 abbr gcc 'git checkout'
 
@@ -68,6 +69,7 @@ abbr tn 'tmux new -s (pwd | sed "s/.*\///g")'
 abbr tm "tmux"
 
 abbr l 'ls'
+abbr lt 'exa --tree'
 abbr ether 'm "https://www.youtube.com/watch?v=7Y1DjR80JJ4"'
 
 # Scripts
@@ -95,7 +97,7 @@ abbr dy "yt-dlp -f 'bestvideo[height=1080]+bestaudio/best[height=1080]'"
 abbr j 'z'
 
 # Unzip
-abbr zip 'unzip'
+# abbr zip 'unzip'
 
 # LINK TO STARSHIP
 starship init fish | source

@@ -15,7 +15,7 @@ settings = {
 harpoon:setup()
 -- REQUIRED
 
-vim.keymap.set("n", "<A-m>", function() harpoon:list():append() end)
+vim.keymap.set("n", "<A-m>", function() harpoon:list():add() end)
 vim.keymap.set("n", "<A-q>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 vim.keymap.set("n", "<A-1>", function() harpoon:list():select(1) end)

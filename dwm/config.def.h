@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-#include "/home/indeche/Downloads/dotfiles/dwm/themes/gruv.h"
+#include "/home/obrien/Downloads/dotfiles/dwm/themes/purple.h"
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -9,8 +9,8 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "monospace:size=12" };
+static const char dmenufont[]       = "monospace:size=12";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -48,16 +48,16 @@ static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 
 static const char *const autostart[] = {
-	"microsoft-edge-stable", NULL,
+	// "microsoft-edge-dev", NULL,
 	"qbittorrent", NULL,
-	"falkon", NULL,
-	"thunderbird", NULL,
+	// "falkon", NULL,
+	// "thunderbird", NULL,
 	"betterbird", NULL,
-	"firefox", NULL,
+	// "firefox", NULL,
 	// "spotify", NULL,
-	"brave", NULL,
+	// "brave", NULL,
 	// "google-chrome-stable", NULL,
-	// "vivaldi", NULL,
+	"vivaldi", NULL,
 	// "calibre", NULL,
 	// "discord", NULL,
 	// "geary", NULL,
@@ -82,8 +82,8 @@ static const Rule rules[] = {
 	{ "Thunar",	                 "thunar",                     NULL,                     0,            1,                0,              0,            -1 },
 	{ "Brave-browser",            "brave-browser",              NULL,                     1 << 0,       0,                0,              0,            -1 },
 	{ "Geary",                    "geary",                      NULL,                     1 << 0,       0,                0,              0,            -1 },
-	{ "Microsoft-edge",           "microsoft-edge",             NULL,                     1 << 1,       0,                0,              0,            -1 },
-	{ "Vivaldi-stable",           "vivaldi-stable",             NULL,                     1 << 2,       0,                0,              0,            -1 },
+	{ "Microsoft-edge-dev",       "microsoft-edge-dev",			   NULL,                     1 << 0,       0,                0,              0,            -1 },
+	{ "Vivaldi-stable",           "vivaldi-stable",             NULL,                     1 << 0,       0,                0,              0,            -1 },
 	{ "calibre",                  "calibre-gui",                NULL,                     1 << 3,       0,                0,              0,            -1 },
 	{ "Google-chrome",            "google-chrome",              NULL,                     1 << 3,       0,                0,              0,            -1 },
 	{ "TelegramDesktop",          "telegram-desktop",           NULL,                     1 << 4,       0,                0,              0,            -1 },
@@ -95,7 +95,7 @@ static const Rule rules[] = {
 	{ "Motrix",                   "motrix",                     NULL,                     1 << 7,       0,                0,              0,            -1 },
 	{ "qBittorrent",              "qbittorrent",                NULL,                     1 << 7,       0,                0,              0,            -1 },
 	{ "firefox",                  "Navigator",                  NULL,                     1 << 8,       0,                0,              0,            -1 },
-	{ "Spotify",                  "spotify",                    NULL,                     1 << 9,       0,                0,              0,            -1 },
+	{ "Spotify",                  "spotify",                    NULL,                     1 << 2,       0,                0,              0,            -1 },
 	{ "discord",                  "discord",                    NULL,                     1 << 10,       0,                0,              0,            -1 },
 	{ "falkon",                   "falkon",                     NULL,                     1 << 11,      0,                0,              0,            -1 },
 };
@@ -116,7 +116,7 @@ static const Layout layouts[] = {
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
-{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
+  { MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
