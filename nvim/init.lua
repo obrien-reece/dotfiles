@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("options")
 require("plugins")
+require("ufo-nvim")
 require("which-keycfg")
 require("cmp-tele-lsp-keymaps-cfg")
 require("autopairs-cfg")
