@@ -213,5 +213,26 @@ require('lazy').setup({
     "kevinhwang91/nvim-ufo",
     dependencies = "kevinhwang91/promise-async",
   },
+  {
+    'kristijanhusak/vim-dadbod-ui',
+    dependencies = {
+      { 'tpope/vim-dadbod', lazy = true },
+      { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true }, -- Optional
+    },
+    cmd = {
+      'DBUI',
+      'DBUIToggle',
+      'DBUIAddConnection',
+      'DBUIFindBuffer',
+    },
+    init = function()
+      -- Your DBUI configuration
+      vim.g.db_ui_use_nerd_fonts = 1
+      vim.g.dbs = {
+        ticket = "mysql://root@localhost:3306/ticket",
+        courier = "mysql://root@localhost:3306/courier",
+      }
+    end,
+  },
 
 }, {})

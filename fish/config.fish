@@ -96,6 +96,15 @@ abbr dy "yt-dlp -f 'bestvideo[height=1080]+bestaudio/best[height=1080]'"
 # autojump/zoxide
 abbr j 'z'
 
+# terminal brightness
+abbr bset "brightnessctl set "
+
+# github authtoken
+abbr auth 'cat ~/Documents/auth | xclip -selection clipboard'
+
+# ssh server
+abbr ubuntu 'cat ~/Documents/ubuntu | xclip -selection clipboard'
+
 # Unzip
 # abbr zip 'unzip'
 
