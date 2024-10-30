@@ -97,14 +97,19 @@ require('lazy').setup({
       end,
     },
   },
-
   {
-    -- Theme inspired by Atom
     'morhetz/gruvbox',
     priority = 1000,
     config = function()
       vim.cmd.colorscheme 'gruvbox'
     end,
+  },
+  {
+    'mvllow/modes.nvim',
+    tag = 'v0.2.0',
+    config = function()
+      require('modes').setup()
+    end
   },
 
   {

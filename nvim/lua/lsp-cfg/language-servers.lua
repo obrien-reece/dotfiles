@@ -44,6 +44,7 @@ if not configs.ls_emmet then
         'sss',
         'hbs',
         'php',
+        'twig',
         'handlebars',
       };
       root_dir = function(fname)
