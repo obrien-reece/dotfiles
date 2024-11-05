@@ -198,9 +198,9 @@ require('lazy').setup({
   {
     'mg979/vim-visual-multi'
   },
-  {
-    'wakatime/vim-wakatime'
-  },
+  -- {
+  --   'wakatime/vim-wakatime'
+  -- },
   {
     'mvllow/modes.nvim'
   },
