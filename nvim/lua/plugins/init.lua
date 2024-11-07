@@ -234,7 +234,7 @@ require('lazy').setup({
       -- Your DBUI configuration
       vim.g.db_ui_use_nerd_fonts = 1
       vim.g.dbs = {
-        ticket = "mysql://root@localhost:3306/ticket",
+        ticketier = "mysql://root@localhost:3306/ticketingadmin",
         courier = "mysql://root@localhost:3306/courier",
       }
     end,

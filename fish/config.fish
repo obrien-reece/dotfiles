@@ -104,6 +104,7 @@ abbr auth 'cat ~/Documents/auth | xclip -selection clipboard'
 
 # ssh server
 abbr ubuntu 'cat ~/Documents/ubuntu | xclip -selection clipboard'
+abbr contabo 'cat ~/Documents/contabo | xclip -selection clipboard'
 
 # Unzip
 # abbr zip 'unzip'
