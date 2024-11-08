@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Declare colors
+red='\033[0;31m'
+nc='\033[0m'
+yellow='\033[1;33m'
+
+wifictl(){
+    case $1 in
+    connect)
+        # Get the SSID (WiFi network name) using nmcli
+        ssid="$(nmcli --terse --fields SSID device wifi list | dmenu -l 10 -p "Select Wifi  :")"
+        pass=$(echo "" | dmenu -l 2 -p "Enter Password  :")
+
+        # Exit if no network is selected
+        [ -z "$ssid" ] && exit 0
+
+        # Connect to the WiFi network and send a notification
+        if [ -n "$pass" ]; then
+            nmcli device wifi connect "$ssid" password "$pass" && notify-send -i network-wireless "WiFi Connected" "Successfully connected to $ssid" -u low
+        else
+            nmcli device wifi connect "$ssid" && notify-send -i network-wireless "WiFi Connected" "Successfully connected to $ssid" -u low
+        fi
+        ;;
+
+    disconnect)
+        # Get the current SSID (WiFi name)
+        current_ssid=$(nmcli -t -f ACTIVE,SSID device wifi | grep '^yes' | cut -d':' -f2)
+
+        # Disconnect from WiFi and send a notification
+        nmcli device disconnect wlan0 && notify-send -i network-wireless-offline "WiFi Disconnected" "Disconnected from $current_ssid" -u low
+        ;;
+
+    *)
+        printf "${red}invalid argument: ${nc} $1 \n"
+        printf "${yellow}valid arguments are:\n"
+        printf "connect\n"
+        printf "disconnect${nc}\n" && exit 1
+        ;;
+    esac
+}
+
+wifictl $1

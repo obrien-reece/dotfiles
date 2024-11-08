@@ -68,7 +68,7 @@ static const struct arg args[] = {
 	{ run_command,			"[ %s] ",               "cat /sys/class/net/wlan0/statistics/rx_bytes | awk '{size = $1; unit = \"B\"; if ($1 >= 1024^3) { size = $1 / (1024^3); unit = \"GB\" } else if ($1 >= 1024^2) { size = $1 / (1024^2); unit = \"MB\" } printf \"%.1f\", size; print unit}' | head -n 1" },
 
 	// { run_command, "[ %s] ", "vnstat -l --oneline | grep \"rx\" | awk '{print $2}'" },
-	{ battery_perc,     "[ %s%%]",        "BAT0" },
+	{ battery_perc,     "[ %s%%]",        "BAT0" },
 	{ netspeed_rx,      "[ %sB/s]",               "wlan0" },
 	{ run_command,			"[   %s ] ",							"amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1 " },
 	{ datetime,         "[📆 %s]",								"%a %b %d %H:%M:%S" },

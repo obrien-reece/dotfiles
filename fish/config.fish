@@ -103,8 +103,9 @@ abbr bset "brightnessctl set "
 abbr auth 'cat ~/Documents/auth | xclip -selection clipboard'
 
 # ssh server
-abbr ubuntu 'cat ~/Documents/ubuntu | xclip -selection clipboard'
-abbr contabo 'cat ~/Documents/contabo | xclip -selection clipboard'
+alias ubuntuserver='cat ~/Documents/ubuntu | xclip -selection clipboard && kitten ssh --kitten=cwd=/var/www/html --kitten=color_scheme=themes/Chalk.conf ubuntu@102.212.245.129'
+alias vpsroot='cat ~/Documents/contabo | xclip -selection clipboard && kitten ssh root@212.56.41.152'
+alias vpsobrien='cat ~/Documents/contabo | xclip -selection clipboard && kitten ssh --kitten=cwd=/var/www/html obrien@212.56.41.152'
 
 # Unzip
 # abbr zip 'unzip'

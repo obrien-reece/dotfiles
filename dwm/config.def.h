@@ -41,7 +41,9 @@ static Sp scratchpads[] = {
 static const char *upvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL };
-static const char *open_notes[] = { "/home/indeche/.local/bin/notes.sh", NULL };
+static const char *open_notes[] = { "/home/obrien/.local/bin/notes.sh", NULL };
+static const char *wificonnect[] = { "/home/obrien/.local/bin/wifictl", "connect", NULL };
+static const char *disconnectwificonnect[] = { "/home/obrien/.local/bin/wifictl", "disconnect", NULL };
 
 /* Control Media Players */
 static const char *medplaypausecmd[] = { "playerctl", "play-pause", NULL };
@@ -150,6 +152,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = blurlock } },
 	{ MODKEY|ShiftMask,             XK_q,      exitdwm,       {0} },
 	{ MODKEY,                       XK_n,      spawn,          {.v = open_notes } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = wificonnect } },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = disconnectwificonnect } },
 
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
