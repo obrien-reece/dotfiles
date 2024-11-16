@@ -219,6 +219,10 @@ require('lazy').setup({
     dependencies = "kevinhwang91/promise-async",
   },
   {
+    'lumiliet/vim-twig'
+  },
+  { 'trivago/prettier-plugin-twig-melody' },
+  {
     'kristijanhusak/vim-dadbod-ui',
     dependencies = {
       { 'tpope/vim-dadbod', lazy = true },
