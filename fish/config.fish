@@ -17,7 +17,7 @@ abbr vim 'nvim'
 
 abbr m 'mpv'
 
-abbr gy 'cd ~/Downloads/paru && clear && ls'
+abbr gy 'cd ~/Downloads/PARU && clear && ll'
 
 abbr fish 'source ~/.config/fish/config.fish'
 
@@ -57,8 +57,14 @@ abbr gbr 'git branch -r'
 abbr gs 'git status'
 abbr gcc 'git checkout'
 
-abbr bm 'blueman-manager'
+# Laravel
 abbr pa 'php artisan'
+
+# Symfony
+abbr bc 'bin/console'
+abbr bcd 'bin/console doctrine:'
+
+abbr bm 'blueman-manager'
 abbr font 'fc-cache -f -v'
 abbr clip 'xclip -selection clipboard'
 abbr open 'xdg-open'
@@ -104,7 +110,7 @@ abbr auth 'cat ~/Documents/auth | xclip -selection clipboard'
 
 # ssh server
 alias ubuntuserver='cat ~/Documents/ubuntu | xclip -selection clipboard && kitten ssh --kitten=cwd=/var/www/html --kitten=color_scheme=themes/Chalk.conf ubuntu@102.212.245.129'
-alias vpsroot='cat ~/Documents/contabo | xclip -selection clipboard && kitten ssh root@212.56.41.152'
+alias vpsroot='cat ~/Documents/contabo | xclip -selection clipboard && kitten ssh --kitten=cwd=/var/www/html root@212.56.41.152'
 alias vpsobrien='cat ~/Documents/contabo | xclip -selection clipboard && kitten ssh --kitten=cwd=/var/www/html obrien@212.56.41.152'
 
 # Unzip

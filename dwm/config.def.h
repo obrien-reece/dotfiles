@@ -99,7 +99,8 @@ static const Rule rules[] = {
 	{ "qBittorrent",              "qbittorrent",                NULL,                     1 << 7,       0,                0,              0,            -1 },
 	{ "firefox",                  "Navigator",                  NULL,                     1 << 8,       0,                0,              0,            -1 },
 	{ "Spotify",                  "spotify",                    NULL,                     1 << 2,       0,                0,              0,            -1 },
-	{ "discord",                  "discord",                    NULL,                     1 << 10,       0,                0,              0,            -1 },
+	{ "Postman",                  "postman",                    NULL,                     1 << 3,       0,                0,              0,            -1 },
+	{ "discord",                  "discord",                    NULL,                     1 << 10,      0,                0,              0,            -1 },
 	{ "falkon",                   "falkon",                     NULL,                     1 << 11,      0,                0,              0,            -1 },
 };
 
@@ -166,7 +167,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
+	// { MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	/*{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },*/
@@ -193,6 +194,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
+	TAGKEYS(                        XK_p,                      3)
 	TAGKEYS(                        XK_5,                      4)
 	TAGKEYS(                        XK_6,                      5)
 	TAGKEYS(                        XK_7,                      6)
